@@ -1,7 +1,9 @@
 # Cybersecurity-Journey
 A beginner's log of learning ethical hacking and cybersecurity from scratch
-# Cybersecurity-Journey
-A beginner's log of learning ethical hacking and cybersecurity from scratch
+> ⚠️ Note: I’m currently learning ethical hacking from scratch.  
+> All notes and progress are based on **my personal learning**, but I use AI tools like ChatGPT to help format, enhance, and organize them for better readability.  
+> My goal is clarity and learning — not shortcuts.
+
 
 ---
 
