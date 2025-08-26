@@ -94,5 +94,7 @@ It serves as a structured record of my practical activities, tools explored, and
 - Aggressive mode gives full detail but increases detection risk.
 - Output formats are important for saving results for reporting.
 
+---
+
 
 _This log is continuously updated as part of my training at **Red Team Hacker Academy** and personal self-directed lab work._
