@@ -58,6 +58,62 @@ These are foundational Linux commands I've learned and practiced. Designed for n
 
 ---
 
+# 🔍 Nmap – Scanning Essentials
+
+These are the Nmap scanning commands I learned and practiced today, covering different scan types, output formats, and scripting.
+
+---
+
+## 🛠 Scan Types
+- `nmap -sS` – TCP SYN (Stealth) Scan  
+- `nmap -sT` – TCP Connect Scan  
+- `nmap -sU` – UDP Scan  
+- `nmap -sN` – TCP Null Scan  
+- `nmap -sX` – Xmas Scan  
+- `nmap -sF` – FIN Scan  
+
+---
+
+## 🎯 Target & Port Scans
+- `nmap -p <ports>` – Scan specific ports  
+- `nmap -p- <target>` – Scan all 65,535 ports  
+- `nmap scanme.nmap.org` – Example scan on Nmap test host  
+- `nmap -sn` – Host discovery (ping scan only)  
+- `nmap -Pn` – Skip host discovery (treat all hosts as online)  
+
+---
+
+## 🚀 Speed & Service Detection
+- `nmap -F` – Fast scan (common ports only)  
+- `nmap -sV` – Detect service versions  
+- `nmap --traceroute` – Trace the route to target  
+
+---
+
+## 📜 Scripts & Automation
+- `nmap -sC` – Default script scan  
+- `nmap --script <script>` – Run a specific NSE script  
+- `nmap -A` – Aggressive scan (OS detect, version, scripts, traceroute)  
+- `nmap -A --script <script>` – Aggressive scan with chosen script  
+- `nmap --script vuln` – Run vulnerability detection scripts  
+
+---
+
+## 💾 Output & Saving
+- `nmap > filename` – Save output to file (overwrite)  
+- `nmap -oN <file>` – Normal output  
+- `nmap -oA <basename>` – Save in all formats (`.nmap`, `.xml`, `.gnmap`)  
+- `nmap -oX <file>` – XML output  
+- `nmap -oS <file>` – Script kiddie output  
+- `nmap -oG <file>` – Grepable output  
+
+---
+
+## 🔊 Verbosity
+- `nmap -v` – Increase verbosity  
+- `nmap -vv` – Very verbose output  
+
+
 ###  Personal Note
 This document is based on my own learning journey, structured and refined with AI for clarity. It’s both a study reference and a showcase-ready asset for my GitHub portfolio.
 Added Linux basic commands list
