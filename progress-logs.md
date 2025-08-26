@@ -50,4 +50,49 @@ It serves as a structured record of my practical activities, tools explored, and
 
 ---
 
+## 🔍 Nmap Scanning & Enumeration
+
+### Overview
+- Practiced host discovery, port scanning, and service enumeration.
+- Learned differences between TCP, UDP, and stealth-based scans.
+- Covered multiple scanning options for detection evasion and in-depth analysis.
+
+### Commands Practiced
+- `nmap -p <port>` — Scan specific port  
+- `nmap -p- <target>` — Scan all ports (1–65535)  
+- `nmap scanme.nmap.org` — Public test scan  
+- `nmap -sn <target>` — Ping scan (host discovery)  
+- `nmap -Pn <target>` — Skip host discovery  
+- `nmap -sS <target>` — SYN (stealth) scan  
+- `nmap -sT <target>` — TCP connect scan  
+- `nmap -sU <target>` — UDP scan  
+- `nmap -sN <target>` — Null scan  
+- `nmap -sX <target>` — Xmas scan  
+- `nmap -sF <target>` — FIN scan  
+- `nmap -F <target>` — Fast scan (common ports)  
+- `nmap -sV <target>` — Service/version detection  
+- `nmap --traceroute <target>` — Trace route  
+- `nmap -o <file>` — Output to file  
+- `nmap -sC <target>` — Default scripts  
+- `nmap --script <script>` — Specific NSE script  
+- `nmap -A <target>` — Aggressive scan  
+- `nmap -A --script <script>` — Aggressive + script  
+- `nmap --script vuln <target>` — Vulnerability scan  
+- `nmap > <file>` — Save output  
+- `nmap -oN <file>` — Normal output  
+- `nmap -oA <basename>` — All output formats  
+- `nmap -oX <file>` — XML output  
+- `nmap -oS <file>` — Script kiddie output  
+- `nmap -oG <file>` — Grepable output  
+- `nmap -v <target>` — Verbose mode  
+- `nmap -vv <target>` — Extra verbose mode  
+
+### Key Learnings
+- SYN scan is faster and stealthier than TCP connect.
+- Null, Xmas, and FIN scans can bypass some firewalls.
+- Version detection and NSE scripts help deeper enumeration.
+- Aggressive mode gives full detail but increases detection risk.
+- Output formats are important for saving results for reporting.
+
+
 _This log is continuously updated as part of my training at **Red Team Hacker Academy** and personal self-directed lab work._
