@@ -95,6 +95,40 @@ It serves as a structured record of my practical activities, tools explored, and
 - Output formats are important for saving results for reporting.
 
 ---
+## Progress Update
+
+### Linux Command Learning – Continued
+
+Today, I learned and practiced additional Linux networking, scanning, and exploitation commands to expand my penetration testing skills.
+
+- Learned `sudo arp-scan -l` to detect devices on the local network using ARP requests.
+- Practiced multiple Nmap output formats:
+  - `nmap -oN` (Normal output)
+  - `nmap -oA` (All formats: Normal, XML, Grepable)
+  - `nmap -oX` (XML output)
+  - `nmap -oS` (Script kiddie style output)
+  - `nmap -oG` (Grepable output)
+- Used verbosity flags:
+  - `-v` for verbose output
+  - `-vv` for very verbose output
+- Reviewed `wc -` for counting words, lines, and characters in output.
+- Practiced Nmap options:
+  - `-p` to specify ports
+  - `-P` for ping scan
+  - `-t4` for faster timing
+  - `-s` to define scan type
+- Tested remote access using `ssh`.
+- Learned web and directory scanning tools:
+  - `dirb` for discovering hidden web directories
+  - `gobuster` for brute forcing directories, files, and DNS subdomains
+  - `ffuf` for web fuzzing
+- Used `sudo apt-get` for package management.
+- Explored exploitation tools:
+  - `msfconsole` for launching the Metasploit Framework
+  - `wp-info` to gather WordPress site information
+  - `getuid` in Metasploit to identify current user privileges.
+
+
 
 
 _This log is continuously updated as part of my training at **Red Team Hacker Academy** and personal self-directed lab work._
