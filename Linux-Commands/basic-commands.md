@@ -113,6 +113,42 @@ These are the Nmap scanning commands I learned and practiced today, covering dif
 - `nmap -v` – Increase verbosity  
 - `nmap -vv` – Very verbose output  
 
+---
+## Networking & Scanning
+
+- `sudo arp-scan -l` → Scans the local network using ARP.
+- `nmap -oN` → Save output in normal format.
+- `nmap -oA` → Save output in all formats (normal, XML, grepable).
+- `nmap -oX` → Save output in XML format.
+- `nmap -oS` → Save output in script kiddie style.
+- `nmap -oG` → Save output in grepable format.
+- `nmap -v` → Verbose output.
+- `nmap -vv` → Very verbose output.
+- `wc -` → Counts words, lines, and characters from input.
+- `-p` → Specify ports (used with nmap).
+- `-P` → Ping scan (used with nmap).
+- `ssh` → Secure shell to connect to a remote system.
+- `-t4` → Timing template 4 (fast scan) in nmap.
+- `-s` → Specifies scan type in tools like nmap.
+
+## Web & Directory Scanning
+
+- `dirb` → Web content scanner for hidden directories/files.
+- `gobuster` → Directory, file, and DNS brute forcing tool.
+- `ffuf` → Web fuzzing tool.
+
+## Package Management
+
+- `sudo apt-get` → Install, update, or remove packages.
+
+## Exploitation Tools
+
+- `msfconsole` → Launches the Metasploit Framework console.
+- `wp-info` → Retrieves WordPress information.
+- `getuid` → Shows current user ID in Metasploit.
+
+
+
 
 ###  Personal Note
 This document is based on my own learning journey, structured and refined with AI for clarity. It’s both a study reference and a showcase-ready asset for my GitHub portfolio.
