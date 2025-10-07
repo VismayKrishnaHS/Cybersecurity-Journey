@@ -242,6 +242,14 @@ Obtained password hashes for all system users, including `root`, `kay`, and `jan
 
 ---
 
+# Transition — Web Applications, Defense & Offense
+
+- Completed the machine/CTF phase and moving into **Web Application Security** plus **Defensive (Blue)** and **Offensive (Red)** domains.
+- **Tools installed and ready:** Burp Suite Pro and FoxyProxy (configured for intercepting lab targets).
+- **Next steps:** begin web app labs (PortSwigger Academy, OWASP Juice Shop, DVWA), practice Burp workflows (Proxy, Repeater, Intruder, Scanner, Collaborator), and start Red/Blue exercises (log analysis / SIEM basics, exploit chaining, post-exploitation).
+
+---
+
 ## ⚠️ Disclaimer
 This activity was performed in a controlled lab environment for educational purposes only.  
 Unauthorized access to computer systems is illegal.
