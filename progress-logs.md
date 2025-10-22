@@ -248,13 +248,41 @@ Obtained password hashes for all system users, including `root`, `kay`, and `jan
 - **Tools installed and ready:** Burp Suite Pro and FoxyProxy (configured for intercepting lab targets).
 - **Next steps:** begin web app labs (PortSwigger Academy, OWASP Juice Shop, DVWA), practice Burp workflows (Proxy, Repeater, Intruder, Scanner, Collaborator), and start Red/Blue exercises (log analysis / SIEM basics, exploit chaining, post-exploitation).
 
----
-
 ## ⚠️ Disclaimer
 This activity was performed in a controlled lab environment for educational purposes only.  
 Unauthorized access to computer systems is illegal.
 
+---
 
+## 🕸️ Web Application Security Progress
+
+### ✅ DVWA (Damn Vulnerable Web Application)
+
+**Environment Setup**
+- **Operating System:** Kali Linux  
+- **Server Stack:** XAMPP (Apache, MySQL, PHP)  
+- **Platform:** DVWA hosted on localhost  
+- **Browser Used:** Firefox (with security extensions disabled for testing)
+
+**Modules Completed**
+- ✅ **SQL Injection:** Learned to identify and exploit unsanitized SQL queries, extract data, and understand the importance of parameterized queries.  
+- ✅ **Command Injection:** Executed system commands through vulnerable input fields and practiced sanitization techniques to prevent it.  
+- ✅ **File Upload Vulnerability:** Uploaded malicious files to gain reverse shells and studied secure file validation mechanisms.  
+- ✅ **File Inclusion (LFI/RFI):** Explored how attackers can include unauthorized files and the impact of improper path validation.  
+- ✅ **Cross-Site Scripting (XSS):** Tested reflected and stored XSS attacks, manipulated client-side scripts, and learned output encoding methods.  
+- ✅ **CSRF (Cross-Site Request Forgery):** Understood how token-based validation prevents unauthorized state changes.  
+- ✅ **Brute Force:** Automated login attempts using Burp Suite and Hydra, and examined rate-limiting countermeasures.  
+- ✅ **Security Levels Configuration:** Practiced escalating difficulty from low to high and analyzed security implementations at each level.
+
+**Key Takeaways**
+- Developed a deeper understanding of how web applications can be exploited through poorly implemented input handling.  
+- Practiced both **offensive techniques** (exploitation) and **defensive measures** (mitigation and secure coding).  
+- Built a strong foundation for advanced web application penetration testing and real-world vulnerability assessments.  
+- Strengthened analytical thinking and manual testing skills essential for professional penetration testing.
+
+**Status:** ✔️ Completed — All DVWA modules successfully tested and documented.
+
+---
 
 
 
